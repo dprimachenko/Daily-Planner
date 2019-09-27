@@ -89,10 +89,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src=./moment-with-locales.js></script>
     <script type="text/javascript">
-      let currentHr = moment().format('HH').charAt(0)+moment().format('HH').charAt(1);
-      if (moment().format('LT').charAt(1) == ":") {
-        currentHr = moment().format('LT').charAt(0);
-      }
+      //console.log();
+      let currentHr = moment().format('HH');
       let btns = [9,10,11,12,1,2,3,4,5];
       let btnsM = [9,10,11,12,13,14,15,16,17];
       $(document).ready(function(){
