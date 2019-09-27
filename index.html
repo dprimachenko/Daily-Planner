@@ -93,10 +93,11 @@
       if (moment().format('LT').charAt(1) == ":") {
         currentHr = moment().format('LT').charAt(0);
       }
-      console.log(currentHr);
       let btns = [9,10,11,12,1,2,3,4,5];
       let btnsM = [9,10,11,12,13,14,15,16,17];
       $(document).ready(function(){
+        let crntDay = moment().format('LL');
+        $("#currentDay").text(crntDay);
         for (let i = 0; i < btns.length; i++) {
           $("#"+btns[i]+"Event").val(localStorage.getItem("text"+btns[i]));
           if(currentHr == btnsM[i]) {
